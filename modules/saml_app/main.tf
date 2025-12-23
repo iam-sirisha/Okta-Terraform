@@ -1,17 +1,35 @@
-resource "okta_app_oidc" "this" {
+resource "okta_app_saml" "this" {
   label = var.label
-  type  = var.application_type
 
-  grant_types    = var.grant_types
-  response_types = var.response_types
+  sso_url     = var.sso_acs_url
+  recipient   = var.recipient
+  destination = var.destination
+  audience    = var.audience
+  issuer      = var.idp_issuer
 
-  redirect_uris             = var.redirect_uris
-  post_logout_redirect_uris = var.post_logout_redirect_uris
+  subject_name_id_template = var.subject_name_id_template
+  subject_name_id_format   = var.subject_name_id_format
 
-  consent_method = var.consent_method
-  issuer_mode    = var.issuer_mode
+  response_signed  = var.response_signed
+  assertion_signed = var.assertion_signed
 
-  refresh_token {
-    rotation_type = var.refresh_token_rotation
+  signature_algorithm = var.signature_algorithm
+  digest_algorithm    = var.digest_algorithm
+
+  honor_force_authn       = var.honor_force_authn
+  authn_context_class_ref = var.authn_context_class_ref
+
+  dynamic "attribute_statements" {
+    for_each = var.attribute_statements
+    content {
+      type      = attribute_statements.value.type
+      name      = attribute_statements.value.name
+      namespace = attribute_statements.value.namespace
+
+      values = lookup(attribute_statements.value, "values", null)
+
+      filter_type  = lookup(attribute_statements.value, "filter_type", null)
+      filter_value = lookup(attribute_statements.value, "filter_value", null)
+    }
   }
 }
