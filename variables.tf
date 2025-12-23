@@ -31,3 +31,38 @@ variable "oidc_apps" {
     refresh_token_rotation    = string
   }))
 }
+############################
+# SAML Apps
+############################
+variable "saml_apps" {
+  description = "Map of SAML applications"
+  type = map(object({
+    label                    = string
+    sso_acs_url              = string
+    recipient                = string
+    destination              = string
+    audience                 = string
+    idp_issuer               = string
+
+    subject_name_id_template = string
+    subject_name_id_format   = string
+
+    response_signed          = bool
+    assertion_signed         = bool
+
+    signature_algorithm      = string
+    digest_algorithm         = string
+
+    honor_force_authn        = bool
+    authn_context_class_ref  = string
+
+    attribute_statements = list(object({
+      type         = string
+      name         = string
+      namespace    = string
+      values       = optional(list(string))
+      filter_type  = optional(string)
+      filter_value = optional(string)
+    }))
+  }))
+}
