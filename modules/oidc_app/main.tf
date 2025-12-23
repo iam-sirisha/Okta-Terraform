@@ -1,4 +1,4 @@
-resource "okta_app_oidc" "this" {
+resource "okta_app_oauth" "this" {
   label = var.label
   type  = var.application_type
 
