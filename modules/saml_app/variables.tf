@@ -1,22 +1,38 @@
 variable "label" {}
-variable "application_type" {}
 
-variable "grant_types" {
-  type = list(string)
+variable "sso_acs_url" {}
+variable "recipient" {}
+variable "destination" {}
+variable "audience" {}
+variable "idp_issuer" {}
+
+variable "subject_name_id_template" {}
+variable "subject_name_id_format" {}
+
+variable "response_signed" {
+  type = bool
 }
 
-variable "response_types" {
-  type = list(string)
+variable "assertion_signed" {
+  type = bool
 }
 
-variable "redirect_uris" {
-  type = list(string)
+variable "signature_algorithm" {}
+variable "digest_algorithm" {}
+
+variable "honor_force_authn" {
+  type = bool
 }
 
-variable "post_logout_redirect_uris" {
-  type = list(string)
-}
+variable "authn_context_class_ref" {}
 
-variable "consent_method" {}
-variable "issuer_mode" {}
-variable "refresh_token_rotation" {}
+variable "attribute_statements" {
+  type = list(object({
+    type         = string
+    name         = string
+    namespace    = string
+    values       = optional(list(string))
+    filter_type  = optional(string)
+    filter_value = optional(string)
+  }))
+}
