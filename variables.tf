@@ -1,18 +1,17 @@
 variable "okta_org_name" {
   description = "Okta organization name"
+  default = "demo-automation-terraform-12601"
 }
 
 variable "okta_base_url" {
   description = "Okta base URL (okta.com or oktapreview.com)"
+  default = "okta.com"
 }
 
 variable "okta_api_token" {
   description = "Okta API token"
   sensitive   = true
-}
-
-variable "environment" {
-  description = "Deployment environment: test or prod"
+  default = "00SlxQTEoEgyjO10PTw9Ow9XDfnWZWlPbvsRiSEOVy"
 }
 
 # MAIN VARIABLE – controls N number of apps
