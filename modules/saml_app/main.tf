@@ -5,7 +5,7 @@ resource "okta_app_saml" "this" {
   recipient   = var.recipient
   destination = var.destination
   audience    = var.audience
-  issuer      = var.idp_issuer
+  idp_issuer  = var.idp_issuer
 
   subject_name_id_template = var.subject_name_id_template
   subject_name_id_format   = var.subject_name_id_format
