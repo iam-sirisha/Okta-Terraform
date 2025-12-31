@@ -1,0 +1,148 @@
+{
+    "id": "0oay5imeqs4BfY6Vl697",
+    "orn": "orn:okta:idp:00otl508lhgmLZNsr697:apps:oidc_client:0oay5imeqs4BfY6Vl697",
+    "name": "oidc_client",
+    "label": "Demo Web App (Terraform)",
+    "status": "ACTIVE",
+    "lastUpdated": "2025-12-08T12:58:06.000Z",
+    "created": "2025-12-08T12:58:06.000Z",
+    "accessibility": {
+        "selfService": false,
+        "errorRedirectUrl": null,
+        "loginRedirectUrl": null
+    },
+    "visibility": {
+        "autoLaunch": false,
+        "autoSubmitToolbar": false,
+        "hide": {
+            "iOS": true,
+            "web": true
+        },
+        "appLinks": {
+            "oidc_client_link": true
+        }
+    },
+    "features": [],
+    "signOnMode": "OPENID_CONNECT",
+    "credentials": {
+        "userNameTemplate": {
+            "template": "${source.login}",
+            "type": "BUILT_IN"
+        },
+        "signing": {
+            "kid": "1eL47-kIVBatMgiEoEEBd4Zb0AoiTKNxm0heid8Z1Wk"
+        },
+        "oauthClient": {
+            "autoKeyRotation": true,
+            "client_id": "0oay5imeqs4BfY6Vl697",
+            "token_endpoint_auth_method": "client_secret_basic",
+            "pkce_required": false
+        }
+    },
+    "universalLogout": {
+        "status": "DISABLED",
+        "supportType": "FULL",
+        "identityStack": "NOT_SHARED",
+        "protocol": "GLOBAL_TOKEN_REVOCATION"
+    },
+    "settings": {
+        "app": {},
+        "notifications": {
+            "vpn": {
+                "network": {
+                    "connection": "DISABLED"
+                },
+                "message": null,
+                "helpUrl": null
+            }
+        },
+        "manualProvisioning": false,
+        "implicitAssignment": false,
+        "notes": {
+            "admin": null,
+            "enduser": null
+        },
+        "oauthClient": {
+            "client_uri": null,
+            "logo_uri": null,
+            "redirect_uris": [
+                "https://example.com/callback"
+            ],
+            "post_logout_redirect_uris": [
+                "https://example.com"
+            ],
+            "response_types": [
+                "code"
+            ],
+            "grant_types": [
+                "authorization_code",
+                "refresh_token"
+            ],
+            "application_type": "web",
+            "consent_method": "TRUSTED",
+            "issuer_mode": "ORG_URL",
+            "refresh_token": {
+                "rotation_type": "STATIC"
+            },
+            "idp_initiated_login": {
+                "mode": "DISABLED",
+                "default_scope": []
+            },
+            "wildcard_redirect": "DISABLED",
+            "dpop_bound_access_tokens": false
+        }
+    },
+    "_links": {
+        "uploadLogo": {
+            "href": "https://demo-coffee-viper-84747.okta.com/api/v1/apps/0oay5imeqs4BfY6Vl697/logo",
+            "hints": {
+                "allow": [
+                    "POST"
+                ]
+            }
+        },
+        "appLinks": [
+            {
+                "name": "oidc_client_link",
+                "href": "https://demo-coffee-viper-84747.okta.com/home/oidc_client/0oay5imeqs4BfY6Vl697/aln177a159h7Zf52X0g8",
+                "type": "text/html"
+            }
+        ],
+        "profileEnrollment": {
+            "href": "https://demo-coffee-viper-84747.okta.com/api/v1/policies/rsttl508sp2o2J53v697"
+        },
+        "policies": {
+            "href": "https://demo-coffee-viper-84747.okta.com/api/v1/apps/0oay5imeqs4BfY6Vl697/policies",
+            "hints": {
+                "allow": [
+                    "PUT"
+                ]
+            }
+        },
+        "groups": {
+            "href": "https://demo-coffee-viper-84747.okta.com/api/v1/apps/0oay5imeqs4BfY6Vl697/groups"
+        },
+        "logo": [
+            {
+                "name": "medium",
+                "href": "https://ok14static.oktacdn.com/assets/img/logos/default.6770228fb0dab49a1695ef440a5279bb.png",
+                "type": "image/png"
+            }
+        ],
+        "clientCredentials": [
+            {
+                "name": "secrets",
+                "href": "https://demo-coffee-viper-84747.okta.com/api/v1/apps/0oay5imeqs4BfY6Vl697/credentials/secrets"
+            }
+        ],
+        "accessPolicy": {
+            "href": "https://demo-coffee-viper-84747.okta.com/api/v1/policies/rsttmtwuizqDmZXZ9697"
+        },
+        "users": {
+            "href": "https://demo-coffee-viper-84747.okta.com/api/v1/apps/0oay5imeqs4BfY6Vl697/users"
+        },
+        "deactivate": {
+            "href": "https://demo-coffee-viper-84747.okta.com/api/v1/apps/0oay5imeqs4BfY6Vl697/lifecycle/deactivate"
+        }
+    }
+}
