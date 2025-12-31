@@ -2,7 +2,7 @@
 #OIDC APPLICATIONS
 #################################
 module "oidc_apps" {
-  source = "./modules/oidc_app"
+  source = "./modules/oauth_app"
 
   for_each = var.oidc_apps
 
@@ -11,7 +11,7 @@ module "oidc_apps" {
   grant_types               = each.value.grant_types
   response_types            = each.value.response_types
 
-  redirect_uris = var.environment == "test" ? each.value.redirect_uris_prod: each.value.redirect_uris_test
+  redirect_uris             = each.value.redirect_uris_test
 
   post_logout_redirect_uris = each.value.post_logout_redirect_uris
   consent_method            = each.value.consent_method
