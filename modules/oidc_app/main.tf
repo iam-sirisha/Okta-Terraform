@@ -11,7 +11,5 @@ resource "okta_app_oauth" "this" {
   consent_method = var.consent_method
   issuer_mode    = var.issuer_mode
 
-  refresh_token {
-    rotation_type = var.refresh_token_rotation
-  }
+  refresh_token_rotation = var.refresh_token_rotation
 }
