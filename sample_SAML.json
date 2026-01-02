@@ -1,0 +1,179 @@
+{
+        "id": "0oaxhe9ffsRUYiI9o697",
+        "orn": "orn:okta:idp:00otl508lhgmLZNsr697:apps:demo-coffee-viper-84747_chatgptsamlintegration_1:0oaxhe9ffsRUYiI9o697",
+        "name": "demo-coffee-viper-84747_chatgptsamlintegration_1",
+        "label": "chatGPT - SAML Integration",
+        "status": "ACTIVE",
+        "lastUpdated": "2025-11-21T00:12:33.000Z",
+        "created": "2025-11-15T11:11:29.000Z",
+        "accessibility": {
+            "selfService": false,
+            "errorRedirectUrl": null,
+            "loginRedirectUrl": null
+        },
+        "visibility": {
+            "autoSubmitToolbar": false,
+            "hide": {
+                "iOS": false,
+                "web": false
+            },
+            "appLinks": {
+                "demo-coffee-viper-84747_chatgptsamlintegration_1_link": true
+            }
+        },
+        "features": [],
+        "signOnMode": "SAML_2_0",
+        "credentials": {
+            "userNameTemplate": {
+                "template": "${source.login}",
+                "type": "BUILT_IN"
+            },
+            "signing": {
+                "kid": "mImRN0B9P1GCXRHrHKh_X8pQQ-_Q7w1kiU0Aw1lVSvA"
+            }
+        },
+        "universalLogout": {
+            "status": "DISABLED",
+            "supportType": "FULL",
+            "identityStack": "NOT_SHARED",
+            "protocol": "GLOBAL_TOKEN_REVOCATION"
+        },
+        "settings": {
+            "app": {},
+            "notifications": {
+                "vpn": {
+                    "network": {
+                        "connection": "DISABLED"
+                    },
+                    "message": null,
+                    "helpUrl": null
+                }
+            },
+            "manualProvisioning": false,
+            "implicitAssignment": false,
+            "signOn": {
+                "defaultRelayState": "",
+                "ssoAcsUrl": "https://auth.workos.com/sso/saml/acs/2L6HIlXaS2xnQKsiIF2zBs4Af",
+                "idpIssuer": "http://www.okta.com/${org.externalKey}",
+                "audience": "https://auth.gmail.com/2L6HIlXaS2xnQKsiIF2zBs4Af",
+                "recipient": "https://auth.workos.com/sso/saml/acs/2L6HIlXaS2xnQKsiIF2zBs4Af",
+                "destination": "https://auth.workos.com/sso/saml/acs/2L6HIlXaS2xnQKsiIF2zBs4Af",
+                "subjectNameIdTemplate": "${user.userName}",
+                "subjectNameIdFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
+                "responseSigned": true,
+                "assertionSigned": true,
+                "signatureAlgorithm": "RSA_SHA256",
+                "digestAlgorithm": "SHA256",
+                "honorForceAuthn": true,
+                "authnContextClassRef": "urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport",
+                "spIssuer": null,
+                "requestCompressed": false,
+                "attributeStatements": [
+                    {
+                        "type": "EXPRESSION",
+                        "name": "id",
+                        "namespace": "urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified",
+                        "values": [
+                            "user.id"
+                        ]
+                    },
+                    {
+                        "type": "EXPRESSION",
+                        "name": "email",
+                        "namespace": "urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified",
+                        "values": [
+                            "user.email"
+                        ]
+                    },
+                    {
+                        "type": "EXPRESSION",
+                        "name": "firstName",
+                        "namespace": "urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified",
+                        "values": [
+                            "user.firstName"
+                        ]
+                    },
+                    {
+                        "type": "EXPRESSION",
+                        "name": "lastName",
+                        "namespace": "urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified",
+                        "values": [
+                            "user.lastName"
+                        ]
+                    },
+                    {
+                        "type": "GROUP",
+                        "name": "groupName",
+                        "namespace": "urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified",
+                        "filterType": "STARTS_WITH",
+                        "filterValue": "test"
+                    }
+                ],
+                "inlineHooks": [],
+                "assertionEncryption": {
+                    "enabled": false
+                },
+                "allowMultipleAcsEndpoints": false,
+                "acsEndpoints": [],
+                "samlSignedRequestEnabled": false,
+                "slo": {
+                    "enabled": false
+                }
+            }
+        },
+        "_links": {
+            "help": {
+                "href": "https://demo-coffee-viper-84747-admin.okta.com/app/demo-coffee-viper-84747_chatgptsamlintegration_1/0oaxhe9ffsRUYiI9o697/setup/help/SAML_2_0/instructions",
+                "type": "text/html"
+            },
+            "metadata": {
+                "href": "https://demo-coffee-viper-84747.okta.com/api/v1/apps/0oaxhe9ffsRUYiI9o697/sso/saml/metadata",
+                "type": "application/xml"
+            },
+            "uploadLogo": {
+                "href": "https://demo-coffee-viper-84747.okta.com/api/v1/apps/0oaxhe9ffsRUYiI9o697/logo",
+                "hints": {
+                    "allow": [
+                        "POST"
+                    ]
+                }
+            },
+            "appLinks": [
+                {
+                    "name": "demo-coffee-viper-84747_chatgptsamlintegration_1_link",
+                    "href": "https://demo-coffee-viper-84747.okta.com/home/demo-coffee-viper-84747_chatgptsamlintegration_1/0oaxhe9ffsRUYiI9o697/alnxheu8zhk0LluIG697",
+                    "type": "text/html"
+                }
+            ],
+            "profileEnrollment": {
+                "href": "https://demo-coffee-viper-84747.okta.com/api/v1/policies/rsttl508sp2o2J53v697"
+            },
+            "policies": {
+                "href": "https://demo-coffee-viper-84747.okta.com/api/v1/apps/0oaxhe9ffsRUYiI9o697/policies",
+                "hints": {
+                    "allow": [
+                        "PUT"
+                    ]
+                }
+            },
+            "groups": {
+                "href": "https://demo-coffee-viper-84747.okta.com/api/v1/apps/0oaxhe9ffsRUYiI9o697/groups"
+            },
+            "logo": [
+                {
+                    "name": "medium",
+                    "href": "https://ok14static.oktacdn.com/fs/bco/4/fs0xhephy9LoPASNs697",
+                    "type": "image/png"
+                }
+            ],
+            "accessPolicy": {
+                "href": "https://demo-coffee-viper-84747.okta.com/api/v1/policies/rsttl508snw13VhaF697"
+            },
+            "users": {
+                "href": "https://demo-coffee-viper-84747.okta.com/api/v1/apps/0oaxhe9ffsRUYiI9o697/users"
+            },
+            "deactivate": {
+                "href": "https://demo-coffee-viper-84747.okta.com/api/v1/apps/0oaxhe9ffsRUYiI9o697/lifecycle/deactivate"
+            }
+        }
+    }
