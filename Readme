@@ -1,0 +1,10 @@
+Commands to run:
+   git clone https://github.com/iam-sirisha/Okta-Terraform.git
+   cd .\Okta-Terraform\
+   .\terraform init
+   .\terraform plan -var-file="oauth_apps.tfvars" -var-file="saml_apps.tfvars"
+  .\terraform apply -var-file="oauth_apps.tfvars" -var-file="saml_apps.tfvars"
+  git status
+  git add .
+  git commit -m "updated main.tf file"
+  git push origin main( authenticate here)
