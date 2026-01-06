@@ -2,7 +2,7 @@
 #OIDC APPLICATIONS
 #################################
 module "oidc_apps" {
-  source = "./modules/oauth_app"
+  source = "./modules/oidc_app"
 
   for_each = var.oidc_apps
 
